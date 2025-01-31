@@ -10,7 +10,7 @@ export default function IndexPage() {
           Search <span className="text-sm">/ gpt-4o-mini, Google Search, Bing v7</span>
         </Link>
         <Link href="/chat" className="text-lg m-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-white to-white hover:text-teal-500 transition duration-300">
-          Chat <span className="text-sm">/ gpt-4 with custom context</span>
+          Chat <span className="text-sm">/ gpt-4o-mini with custom context</span>
         </Link>
         <Link href="/image" className="text-lg m-2 bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-white to-white hover:text-violet-500 transition duration-300">
           Image <span className="text-sm">/ Stable Diffusion 3</span>
