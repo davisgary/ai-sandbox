@@ -13,26 +13,29 @@ export async function POST(request: Request) {
       messages: [
         {
           role: 'system',
-          content: 'You are an AI assistant that conducts real-time web searches to provide recent news, stories, and information from trusted sources. Your responses should be structured, concise, and fact-based, summarizing key details in a clear and neutral manner. Always perform web searches to gather the most recent and authoritative information, ensuring accuracy and credibility. Aggregate findings into a well-organized response, prioritizing clarity while maintaining factual integrity. At the end of your response, provide a Sources section where you list the URLs of the sources in the order they were cited. Number the sources so that each in-text citation matches its number in the Sources section.',
+          content: 'You are an AI assistant that conducts real-time web searches to provide very concise, fact-based summaries from trusted sources. Focus on recent news, stories, and information from authoritative and credible sources. Keep responses under 200 words. Always perform web searches to gather the most recent and authoritative information. At the end of your response, provide a Sources section with the URLs of the sources cited in the order they appear.',
         },
         {
           role: 'user',
-          content: `Provide a summary of the most recent news and information about ${message}.`,
+          content: `Provide a short summary of the most recent news and information about ${message}.`,
         },
       ],
-      temperature: 0.2,
+      temperature: 0.1,
       top_k: 0,
-      top_p: 0.9,
+      top_p: 0.7,
       frequency_penalty: 1,
       presence_penalty: 0,
       search_recency_filter: 'month',
+      max_tokens: 300,
     }),
   };
+
   try {
     const response = await fetch('https://api.perplexity.ai/chat/completions', options);
     const data = await response.json();
     console.log('Perplexity API Response:', data);
-    if (data && data.choices && data.choices.length > 0) {
+
+    if (data?.choices?.length > 0) {
       return NextResponse.json({
         message: data.choices[0].message.content,
       });
