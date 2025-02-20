@@ -9,7 +9,7 @@ export async function POST(request: Request) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'sonar-pro',
+      model: 'sonar-reasoning-pro',
       messages: [
         {
           role: 'system',

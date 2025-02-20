@@ -7,7 +7,7 @@ export default function IndexPage() {
     <div className="relative min-h-screen flex flex-col bg-black text-center text-white">
       <div className="font-semibold relative z-20 w-full max-w-3xl mx-auto flex flex-col items-center justify-start flex-grow px-5 py-24">
         <Link href="/sonar" className="text-lg m-2 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-white to-white hover:text-sky-500 transition duration-300">
-          Search <span className="text-sm">/ sonar-pro (DeepSeek R1)</span>
+          Search <span className="text-sm">/ sonar-reasoning-pro (DeepSeek R1)</span>
         </Link>
         <Link href="/search" className="text-lg m-2 bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-white to-white hover:text-teal-500 transition duration-300">
           Search <span className="text-sm">/ gpt-4o-mini, Google Search, Bing v7</span>

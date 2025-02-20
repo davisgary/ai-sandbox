@@ -1,12 +1,22 @@
 <h1>AI Sandbox</h1>
-Exploring the world of AI.
+Project testing with different models
 
-## Running Locally
+## Getting Started
 
-Clone and install the project's dependencies with `npm install`.
+1. Clone the repo
+2. Create a local env file with your API keys `.env.local`
+3. Install the project's dependencies `npm install`
+4. Run the dev server `npm run dev`
 
-Create a `.env.local` file with your API keys.
+Your site will be running at <http://localhost:3000>
 
-From there, you can run the dev server with `npm run dev`.
+## Tech Stack
 
-Your site will be running at <http://localhost:3000>.
+- Next.js v15 app router
+- Tailwind v3
+- Sonar Reasoning Pro
+- OpenAI gpt-4o-mini
+- Google Custom Search
+- Google Trends
+- Bing v7
+- Stable Diffusion 3
